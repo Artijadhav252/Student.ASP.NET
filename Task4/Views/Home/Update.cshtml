@@ -1,0 +1,46 @@
+﻿@model Student
+<html>
+    <head>
+        <title></title>
+        <style>
+        body {
+            background-color: deepskyblue;
+        }
+        form{
+            border-style: double;
+            width: 500px;
+            padding: 12px;
+            margin-left: 350px;
+            margin-top: 30px;
+            background-color: #FFEBCD;
+        }
+        h2{
+            text-align:center;
+        }
+        </style>
+    </head>
+<body>
+
+    <h2>Update The Student Information</h2>
+
+    <div>
+        <form asp-controller="Home" asp-action="Update" method="post">
+            <label for="Name"> Name:</label><br>
+            <input type="text" asp-for="Name" /><br>
+            <label for="Gender">Gender:</label><br>
+            <input type="text" asp-for="Gender" /><br>
+            <label for="Class">Class:</label><br>
+            <input type="text" asp-for="Class" /><br>
+            <label for="Address">Address:</label><br>
+            <input type="text" asp-for="Address"><br>
+            <input type="submit" value="Update" class="btn btn-primary" />
+        </form>
+
+    </div>
+
+
+
+
+</body>
+</html>
+

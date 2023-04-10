@@ -1,0 +1,45 @@
+﻿@model List<Student>
+<html>
+    <head>
+        <title>This is Index page</title>
+        <style>
+            body{
+                background-color:deepskyblue;
+            }
+        </style>
+    
+    </head>
+    <body>
+        <h1>Student</h1>
+        <table class="table table-primary">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Name</td>
+                    <td>Gender</td>
+                    <td>Class</td>
+                    <td>Address</td>
+                    <td>Update</td>
+                    <td>Delete</td>
+                    
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach(var student in Model)
+                {
+                    <tr>   
+                         <td>@student.Id</td>
+                         <td>@student.Name</td>
+                         <td>@student.Gender</td>
+                         <td>@student.Class</td>
+                         <td>@student.Address</td>
+                         <td><a href="Home/Update/@student.Id">Update</a></td>
+                         <td><a href="Home/Delete/@student.Id">Delete</a></td>
+                    </tr>
+                }
+        </tbody>
+        </table>
+        <a href="Home/Create/" class="btn btn-primary">Add Student</a>
+    </body>
+</html>

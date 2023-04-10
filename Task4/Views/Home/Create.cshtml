@@ -1,0 +1,64 @@
+﻿@model Student
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>
+        body {
+            background-color: deepskyblue;
+        }
+        #div{
+            border-style:double;
+            
+            width:400px;
+            padding:12px;
+            margin-left:350px;
+            margin-top:30px;
+            background-color:#FFEBCD;
+
+        }
+        h2{
+            text-align:center;
+        }
+        </style>
+    </head>
+<body>
+
+    <h2>Create the Student Information</h2>
+
+   <div id="div">
+        <form asp-controller="Home" asp-action="Create" method="post">
+            <label for="Name"> Name:</label><br>
+            <input type="text" asp-for="Name" placeholder="Enter the student name" />
+            <span asp-validation-for="Name" class="text-denger"></span>
+            <br>
+            <label for="Gender">Gender:</label><br>
+            <select name="Gender" asp-for="Gender">
+                <option value="">Please select one...</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Other">Other</option>
+
+            </select>
+            <span asp-validation-for="Gender" class="text-denger"></span>
+            <br>
+            <label for="Class">Class:</label><br>
+            <input type="text" asp-for="Class" placeholder="Enter the student class" />
+            <span asp-validation-for="Class" class="text-denger"></span>
+            <br>
+            <label for="Address">Address:</label><br>
+            <input type="text" asp-for="Address" placeholder="Enter the student  address">
+            <span asp-validation-for="Address" class="text-denger"></span>
+            <br><br>
+            <input type="submit" value="Create" />
+        </form>
+   </div>
+
+    
+
+    
+
+</body>
+</html>
+
